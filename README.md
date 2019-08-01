@@ -1,3 +1,4 @@
+![allstate](https://user-images.githubusercontent.com/19572673/62312597-8e5d9780-b45c-11e9-84d5-ba8994ccb7f7.jpg)
 # Allstate_Claim_Prediction_Challenge
 
 ## Abstract:
