@@ -12,6 +12,10 @@ The Allstate Corporation is one of the largest insurance providers in the United
 
 ## Initial Dataset:
 
+##### sampleSubmission.csv
+##### test_v2.csv
+##### train.csv
+
 ## Software:
 ### Python
 
