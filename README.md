@@ -15,5 +15,11 @@ The Allstate Corporation is one of the largest insurance providers in the United
 ## Software:
 ### Python
 
-## Basic Steps:
-#### Downloaded the dataset. 
+## Data:
+Each row contains one year’s worth information for insured vehicles.  Since the goal of this competition is to improve the ability to use vehicle characteristics to accurately predict insurance claim payments, the response variable (dollar amount of claims experienced for that vehicle in that year) has been adjusted to control for known non-vehicle effects. Some non-vehicle characteristics (labeled as such in the data dictionary) are included in the set of independent variables.  It is expected that no “main effects” corresponding will be found for these non-vehicle variables, but there may be interesting interactions with the vehicle variables. 
+
+Calendar_Year is the year that the vehicle was insured.  Household_ID is a household identification number that allows year-to-year tracking of each household. Since a customer may insure multiple vehicles in one household, there may be multiple vehicles associated with each household identification number. "Vehicle" identifies these vehicles (but the same "Vehicle" number may not apply to the same vehicle from year to year). You also have the vehicle’s model year and a coded form of make (manufacturer), model, and submodel.  The remaining columns contain miscellaneous vehicle characteristics, as well as other characteristics associated with the insurance policy.  See the "data dictionary" (data_dictionary.txt) for additional information.
+
+Our dataset naturally contained some missing values. Records containing missing values have been removed from the test data set but not from the training dataset. You can make use of the records with missing values, or completely ignore them if you wish. They are coded as "?".
+
+There are two datasets to download: training data and test data. You will use the training dataset to build your model, and will submit predictions for the test dataset. The training data has information from 2005-2007, while the test data has information from 2008 and 2009. Submissions should consist of a CSV file. Records from 2008 will be used to score the leaderboard, and records from 2009 will be used to determine the final winner.
