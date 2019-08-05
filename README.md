@@ -6,6 +6,9 @@ As a customer shops an insurance policy, he/she will receive a number of quotes 
 ##### https://www.kaggle.com/c/allstate-purchase-prediction-challenge/overview
 ##### https://www.allstate.com/
 
+## Industry: 
+### Insurance
+
 ## Company Information:
 The Allstate Corporation is one of the largest insurance providers in the United States and one of the largest that is publicly held. The company also has personal lines insurance operations in Canada. Allstate was founded in 1931 as part of Sears, Roebuck and Co., and was spun off in 1993.The company has had its headquarters in Northfield Township, Illinois, near Northbrook since 1967. Allstate ranked No. 79 in the 2018 Fortune 500 list of the largest United States corporations by total revenue. Its current advertising campaign, in use since 2004, asks, "Are you in good hands?" 
 ##### https://en.wikipedia.org/wiki/Allstate
