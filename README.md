@@ -16,10 +16,40 @@ The Allstate Corporation is one of the largest insurance providers in the United
 ### Python
 
 ## Data:
-Each row contains one year’s worth information for insured vehicles.  Since the goal of this competition is to improve the ability to use vehicle characteristics to accurately predict insurance claim payments, the response variable (dollar amount of claims experienced for that vehicle in that year) has been adjusted to control for known non-vehicle effects. Some non-vehicle characteristics (labeled as such in the data dictionary) are included in the set of independent variables.  It is expected that no “main effects” corresponding will be found for these non-vehicle variables, but there may be interesting interactions with the vehicle variables. 
+The training and test sets contain transaction history for customers that ended up purchasing a policy. For each customer_ID, you are given their quote history. In the training set you have the entire quote history, the last row of which contains the coverage options they purchased. In the test set, you have only a partial history of the quotes and do not have the purchased coverage options. These are truncated to certain lengths to simulate making predictions with less history (higher uncertainty) or more history (lower uncertainty).
 
-Calendar_Year is the year that the vehicle was insured.  Household_ID is a household identification number that allows year-to-year tracking of each household. Since a customer may insure multiple vehicles in one household, there may be multiple vehicles associated with each household identification number. "Vehicle" identifies these vehicles (but the same "Vehicle" number may not apply to the same vehicle from year to year). You also have the vehicle’s model year and a coded form of make (manufacturer), model, and submodel.  The remaining columns contain miscellaneous vehicle characteristics, as well as other characteristics associated with the insurance policy.  See the "data dictionary" (data_dictionary.txt) for additional information.
+For each customer_ID in the test set, you must predict the seven coverage options they end up purchasing.
 
-Our dataset naturally contained some missing values. Records containing missing values have been removed from the test data set but not from the training dataset. You can make use of the records with missing values, or completely ignore them if you wish. They are coded as "?".
+What is a customer?
+Each customer has many shopping points, where a shopping point is defined by a customer with certain characteristics viewing a product and its associated cost at a particular time.
 
-There are two datasets to download: training data and test data. You will use the training dataset to build your model, and will submit predictions for the test dataset. The training data has information from 2005-2007, while the test data has information from 2008 and 2009. Submissions should consist of a CSV file. Records from 2008 will be used to score the leaderboard, and records from 2009 will be used to determine the final winner.
+Some customer characteristics may change over time (e.g. as the customer changes or provides new information), and the cost depends on both the product and the customer characteristics.
+A customer may represent a collection of people, as policies can cover more than one person.
+A customer may purchase a product that was not viewed!
+Product Options
+Each product has 7 customizable options selected by customers, each with 2, 3, or 4 ordinal values possible:
+
+Product Options
+
+A product is simply a vector with length 7 whose values are chosen from each of the options listed above. The cost of a product is a function of both the product options and customer characteristics.
+
+Variable Descriptions
+customer_ID - A unique identifier for the customer
+shopping_pt - Unique identifier for the shopping point of a given customer
+record_type - 0=shopping point, 1=purchase point
+day - Day of the week (0-6, 0=Monday)
+time - Time of day (HH:MM)
+state - State where shopping point occurred
+location - Location ID where shopping point occurred
+group_size - How many people will be covered under the policy (1, 2, 3 or 4)
+homeowner - Whether the customer owns a home or not (0=no, 1=yes)
+car_age - Age of the customer’s car
+car_value - How valuable was the customer’s car when new
+risk_factor - An ordinal assessment of how risky the customer is (1, 2, 3, 4)
+age_oldest - Age of the oldest person in customer's group
+age_youngest - Age of the youngest person in customer’s group
+married_couple - Does the customer group contain a married couple (0=no, 1=yes)
+C_previous - What the customer formerly had or currently has for product option C (0=nothing, 1, 2, 3,4)
+duration_previous -  how long (in years) the customer was covered by their previous issuer
+A,B,C,D,E,F,G - the coverage options
+cost - cost of the quoted coverage options
