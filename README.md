@@ -1,31 +1,37 @@
 ![allstate](https://user-images.githubusercontent.com/19572673/62312597-8e5d9780-b45c-11e9-84d5-ba8994ccb7f7.jpg)
 # Allstate Purchase Prediction Challenge
+### Pujan Malavia
 
-## Abstract:
+### Abstract:
 As a customer shops an insurance policy, he/she will receive a number of quotes with different coverage options before purchasing a plan. This is represented in this challenge as a series of rows that include a customer ID, information about the customer, information about the quoted policy, and the cost. Predict the purchased coverage options using a limited subset of the total interaction history. If the eventual purchase can be predicted sooner in the shopping window, the quoting process is shortened and the issuer is less likely to lose the customer's business. Using a customer’s shopping history, can you predict what policy they will end up choosing? 
-##### https://www.kaggle.com/c/allstate-purchase-prediction-challenge/overview
-##### https://www.allstate.com/
 
-## Industry: 
-### Insurance
+https://www.kaggle.com/c/allstate-purchase-prediction-challenge/overview
 
-## Company Information:
+https://www.allstate.com/
+
+### Industry: 
+Insurance
+
+### Company Information:
 The Allstate Corporation is one of the largest insurance providers in the United States and one of the largest that is publicly held. The company also has personal lines insurance operations in Canada. Allstate was founded in 1931 as part of Sears, Roebuck and Co., and was spun off in 1993.The company has had its headquarters in Northfield Township, Illinois, near Northbrook since 1967. Allstate ranked No. 79 in the 2018 Fortune 500 list of the largest United States corporations by total revenue. Its current advertising campaign, in use since 2004, asks, "Are you in good hands?" 
 ##### https://en.wikipedia.org/wiki/Allstate
 
-## Use Case:
-### Predict Bodily Injury Liability Insurance claim payments based on the characteristics of the insured’s vehicle
+### Use Case:
+Predict Bodily Injury Liability Insurance claim payments based on the characteristics of the insured’s vehicle
 
-## Initial Dataset:
+### Initial Dataset(s):
 
-##### sampleSubmission.csv
-##### test_v2.csv
-##### train.csv
+sampleSubmission.csv
 
-## Software:
-### Python
+test_v2.csv
 
-## Data:
+train.csv
+
+### Software:
+
+Python
+
+### Data:
 The training and test sets contain transaction history for customers that ended up purchasing a policy. For each customer_ID, you are given their quote history. In the training set you have the entire quote history, the last row of which contains the coverage options they purchased. In the test set, you have only a partial history of the quotes and do not have the purchased coverage options. These are truncated to certain lengths to simulate making predictions with less history (higher uncertainty) or more history (lower uncertainty).
 
 For each customer_ID in the test set, you must predict the seven coverage options they end up purchasing.
@@ -43,7 +49,8 @@ Product Options
 
 A product is simply a vector with length 7 whose values are chosen from each of the options listed above. The cost of a product is a function of both the product options and customer characteristics.
 
-Variable Descriptions
+### Data Fields:
+
 ##### customer_ID - A unique identifier for the customer
 ##### shopping_pt - Unique identifier for the shopping point of a given customer
 ##### record_type - 0=shopping point, 1=purchase point
