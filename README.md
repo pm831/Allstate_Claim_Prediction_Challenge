@@ -88,3 +88,28 @@ duration_previous -  how long (in years) the customer was covered by their previ
 A,B,C,D,E,F,G - the coverage options
 
 cost - cost of the quoted coverage options
+
+### Data Curation Process
+
+R Visualization (ggplot2 & Maps libraries)
+
+Number of Shopping Points
+
+![viz1](https://user-images.githubusercontent.com/19572673/86279846-b42d7800-bba8-11ea-8633-d35253b49793.png)
+
+Effect of Number of Shopping Points on Predictive Power of Last Quote
+
+![viz2](https://user-images.githubusercontent.com/19572673/86279849-b4c60e80-bba8-11ea-8798-574ca5049fa9.png)
+
+Effect of Purchase Hour on Likelihood of Changing from Last Quote
+
+![viz3](https://user-images.githubusercontent.com/19572673/86279851-b4c60e80-bba8-11ea-9497-95d3cf4ba903.png)
+
+Liklihood Selection of Option D based on Option C
+
+![viz4](https://user-images.githubusercontent.com/19572673/86279852-b4c60e80-bba8-11ea-8ca0-991f9c3f0557.png)
+
+Clustering of States
+
+![viz5](https://user-images.githubusercontent.com/19572673/86279854-b4c60e80-bba8-11ea-9bfd-c4d5676bbc2f.png)
+
