@@ -21,11 +21,9 @@ Predict Bodily Injury Liability Insurance claim payments based on the characteri
 
 ### Initial Dataset(s):
 
-sampleSubmission.csv
-
-test_v2.csv
-
-train.csv
+* sampleSubmission.csv
+* test_v2.csv
+* train.csv
 
 ### Software:
 
